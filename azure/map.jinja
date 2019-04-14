@@ -1,0 +1,12 @@
+{% import_yaml "azure/defaults.yaml" as defaults %}
+{% import_yaml "azure/osmap.yaml" as osmap %}
+
+{% set azure = salt['grains.filter_by'](
+  defaults,
+  merge=salt['grains.filter_by'](
+        osmap,
+        grain='os_family',
+        merge=salt['pillar.get']('azure:lookup', {}),),
+  base = 'azure',
+)
+%}

@@ -1,0 +1,3 @@
+azure:
+  deb_apt_source: /etc/apt/sources.list.d/azure-cli.list
+  azure_cli_pkg: azure-cli
