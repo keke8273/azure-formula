@@ -24,3 +24,4 @@ azure_cli:
   pkg.installed:
     - pkgs:
       - {{azure.azure_cli_pkg}}
+      - refresh: True
