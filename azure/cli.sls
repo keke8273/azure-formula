@@ -18,7 +18,7 @@ azure_cli:
       {%set repo_suffix = grains['oscodename'] %}
     {% endif %}
     - file: {{azure.deb_apt_source}}
-    - name: deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ {{repo_suffix}} main"
+    - name: deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ {{repo_suffix}} main
     - require_in:
       - pkg: azure_cli
   pkg.installed:
